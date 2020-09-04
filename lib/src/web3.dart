@@ -51,7 +51,7 @@ class Web3 {
     _defaultGasLimit = defaultGasLimit ?? DEFAULT_GAS_LIMIT;
   }
 
-  static String generateMnemonic() {
+  static Future<String> generateMnemonic() {
     return bip39.generateMnemonic(wordlist: Wordlist.ITALIAN);
   }
 
