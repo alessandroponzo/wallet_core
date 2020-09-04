@@ -250,6 +250,11 @@ class Web3 {
     Uint8List signature = await _credentials.signPersonalMessage(hash);
     return '0x' + HEX.encode(signature);
   }
+  
+  Future<Uint8List> signO(String hash,) async {
+  
+    return await _credentials.sign(hash);
+  }
 
   Future<Map<String, dynamic>> trasferDaiToDAIpOffChain(String walletAddress, num tokenAmount, int tokenDecimals, {String network = "fuse"}) async {
     EthereumAddress wallet = EthereumAddress.fromHex(walletAddress);
