@@ -52,7 +52,7 @@ class Web3 {
   }
 
   static Future<String> generateMnemonic() {
-    return bip39.generateMnemonic(wordlist: Wordlist.ITALIAN);
+    return bip39.generateMnemonic();
   }
 
   static String privateKeyFromMnemonic(String mnemonic) {
