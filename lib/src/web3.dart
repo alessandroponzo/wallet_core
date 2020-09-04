@@ -52,7 +52,7 @@ class Web3 {
   }
 
   static String generateMnemonic() {
-    return bip39.generateMnemonic();
+    return bip39.generateMnemonic(wordlist: Wordlist.ITALIAN);
   }
 
   static String privateKeyFromMnemonic(String mnemonic) {
